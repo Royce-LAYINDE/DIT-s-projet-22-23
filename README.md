@@ -1,2 +1,2 @@
 # DIT-s-projet-22-23
-Création d’une plateforme de gestion des notes des étudiants du DIT avec génération de bulletins
+Création d’une plateforme de gestion des notes d'étudiants avec génération de bulletins
