@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <title>Page de connexion</title>
+</head>
+<body>
+    <div class="partie-text">
+        <div>
+            <span class="ellipse1"> </span>
+            <span class="ellipse2"> </span>
+            <span class="ellipse3"> </span>
+            <span class="ellipse4"> </span>
+            <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer" class="DIT">DIT</a>
+           
+        </div>
+        <div class="Welcome-Back">
+            <h3> DIT-Eduplaner </h3>
+        </div>
+
+        <div class="formulaire">
+            <form action="http://127.0.0.1:5000/connexion" method="post">
+                <p>
+                    <label for="email">E-mail</label> <br>
+                    <input type="email" name="email" placeholder="dit.sn@gmail.com" required>
+                </p>
+                <p>
+                    <label for="password">Mot de passe </label> <br>
+                    <input type="password" name="password" placeholder="xxxxxxxxxxxxxxxxxxx" required>
+                </p>
+                <p>
+                    {% if error_message %}
+                    <span style="color: red;">{{ error_message }}</span>
+                    {% endif %}
+                </p>
+                <p>
+                    <button  type="submit">Connexion</button>
+                </p>
+
+            </form>
+
+        </div>
+
+
+    </div>
+    <div class="partie-image">
+        <img class="image2" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+        <img class="image1" src="{{ url_for('static', filename='images/image1.png') }}" alt="Image1"> 
+         
+    </div>
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+
+</body>
+</html>

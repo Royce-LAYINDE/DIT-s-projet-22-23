@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='acceuil.css') }}">
+    <title>Historique de Présences</title>
+</head>
+<body>
+    <div class="nav">
+
+        <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer">
+            <img class="logo" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+        </a>
+        <a href="http://127.0.0.1:5000/acceuil" class="acceuil">Accueil</a>
+        <a href="http://127.0.0.1:5000/notes" class="notes">Notes</a>
+        <div class="dropdown">
+            <a href="#" class="presences">Présences</a>
+            <div class="dropdown-content">
+                <a href="http://127.0.0.1:5000/recap_absences.html">Récapitulatif des absences</a>
+                <a href="http://127.0.0.1:5000/historique_presences.html">Historique des présences</a>
+            </div>
+        </div>
+        <a href="#" class="deconnexion1" onclick="confirmLogout()">Déconnexion</a>
+        <input id="search" type="text" name="search" placeholder="Rechercher un étudiant/une matière ou une date...">
+    </div>
+   
+    <div>
+        <button id="showMoreButton" onclick="toggleMoreText()">A propos</button>
+
+        <!-- Historiques des presences par matières et par étudiant -->
+        <table border="1" class="histtable" id="table">
+            <tr>
+                <th>Nom de l’étudiant</th>
+                <th>Matière</th>
+                <th>Date d’absence</th>
+                <th>Statut d’absence</th>
+            </tr>
+            {% for presence in presences_data %}
+            <tr>
+                <td>{{ presence[0] }}</td>
+                <td>{{ presence[1] }}</td>
+                <td>{{ presence[2] }}</td>
+                <td>{{ presence[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <div class="textinscription2" id="moreText" style="display: none;">
+        <p>
+            Bienvenue sur la page des historiques des présences, réservée aux responsables pédagogiques. Cette section vous permet d'examiner les données passées concernant la participation des étudiants. Analysez les tendances de présence pour évaluer leur engagement et pour soutenir leur parcours éducatif.
+        </p>
+        <p>
+            Les informations sur les présences passées vous aident à comprendre l'engagement des étudiants dans leurs cours. En identifiant les moments où leur présence est optimale, vous pouvez adapter vos approches pédagogiques pour maintenir leur motivation et leur participation active.
+        </p>
+        <p>
+            La collaboration entre les responsables pédagogiques et les étudiants est cruciale pour créer une expérience éducative positive. Continuez à surveiller les données de présence et à communiquer avec les étudiants pour les encourager à être présents et engagés.
+        </p>
+        
+    </div>
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</body>
+</html>

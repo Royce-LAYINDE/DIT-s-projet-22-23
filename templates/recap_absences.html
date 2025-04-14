@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='acceuil.css') }}">
+    <title>Présences</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer">
+            <img class="logo" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+        </a>        <a href="http://127.0.0.1:5000/acceuil" class="acceuil">Accueil</a>
+        <a href="http://127.0.0.1:5000/notes" class="notes">Notes</a>
+        <div class="dropdown">
+            <span class="ellipse1"></span>
+            <a href="#" class="presences">Présences</a>
+            <div class="dropdown-content">
+                <a href="http://127.0.0.1:5000/recap_absences.html">Récapitulatif des absences</a>
+                <a href="http://127.0.0.1:5000/historique_presences.html">Historique des présences</a>
+            </div>
+        </div>
+        <a href="#" class="deconnexion1" onclick="confirmLogout()">Déconnexion</a>
+        <input id="search" type="text" name="search" placeholder="Rechercher un étudiant,une matière..">
+    </div>
+    <div>
+        <button id="showMoreButton" onclick="toggleMoreText()">A propos</button>
+
+        <!-- Tableau récapitulatif des absences par matières et par étudiant -->
+        <table class="recap-table" id="table">
+            <caption>Récapitulatif des absences par matière et par étudiant</caption>
+            <tr>
+                <th>Nom de l'étudiant</th>
+                <th>Matière</th>
+                <th>Nombre d'absences</th>
+            </tr>
+            {% for data in absences_recap_data %}
+            <tr>
+                <td>{{ data[0] }}</td>
+                <td>{{ data[1] }}</td>
+                <td>{{ data[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div class="textinscription1" id="moreText" style="display: none;">
+        <p>
+            Bienvenue sur la page des récapitulatifs des absences, spécialement conçue pour les responsables pédagogiques. Cette section vous offre un aperçu global des absences des étudiants. Identifiez rapidement les modèles d'absentéisme et prenez des mesures appropriées pour garantir leur engagement continu dans les activités académiques.
+        </p>
+        <p>
+            L'analyse des absences vous permettra de repérer les signaux d'alerte et de réagir rapidement pour éviter tout impact négatif sur la progression des étudiants. En collaborant avec eux pour surmonter les défis liés à l'absentéisme, vous contribuez à maintenir un environnement d'apprentissage stimulant et productif.
+        </p>
+        <p>
+            N'oubliez pas que chaque absence peut avoir un impact sur le parcours éducatif des étudiants. Votre suivi attentif et vos interventions bien avisées sont essentiels pour les guider vers la réussite.
+        </p>
+        
+    </div>
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</body>
+</html>

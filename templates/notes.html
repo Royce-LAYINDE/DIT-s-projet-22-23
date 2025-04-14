@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='acceuil.css') }}">
+    <title>Notes</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer">
+            <img class="logo" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+        </a>        <a href="http://127.0.0.1:5000/acceuil" class="acceuil">Accueil</a>
+        <a href="http://127.0.0.1:5000/notes" class="notes">Notes</a>
+        <div class="dropdown">
+            <a href="#" class="presences">Présences</a>
+            <div class="dropdown-content">
+                <a href="http://127.0.0.1:5000/recap_absences.html">Récapitulatif des absences</a>
+                <a href="http://127.0.0.1:5000/historique_presences.html">Historique des présences</a>
+            </div>
+        </div>
+        <a href="#" class="deconnexion1" onclick="confirmLogout()">Déconnexion</a>
+        <input id="search" type="text" name="search" placeholder="Rechercher un étudiant..">
+    </div>
+    
+
+    <table border="1" id="table">
+        <button id="showMoreButton" onclick="toggleMoreText()">A propos</button>
+
+        <tr>
+            <th data-column="id">ID</th>
+            <th data-column="prenom">Prénom</th>
+            <th data-column="nom">Nom</th>
+            <th>Examen Anglais</th>
+            <th>Devoir Anglais</th>
+            <th>Devoir TEC</th>
+            <th>Examen TEC</th>
+            <th>Devoir Python</th>
+            <th>Examen Python</th>
+            <th>Devoir R</th>
+            <th>Examen R</th>
+            <th>Devoir outils stat</th>
+            <th>Examen outils stat</th>
+            <th>Devoir outils math</th>
+            <th>Examen outils math</th>
+            <th>Devoir DevOps</th>
+            <th>examen DevOps</th>
+            <th>Devoir IoT</th>
+            <th>Examen IoT</th>
+            <th>Devoir outils IA</th>
+            <th>Examen outils IA</th>
+        </tr>
+        {% for student in students_data %}
+        <tr>
+            <td>{{ student[0] }}</td>
+            <td>{{ student[1] }}</td>
+            <td>{{ student[2] }}</td>
+            <td>{{ student[3] }}</td>
+            <td>{{ student[4] }}</td>
+            <td>{{ student[5] }}</td>
+            <td>{{ student[6] }}</td>
+            <td>{{ student[7] }}</td>
+            <td>{{ student[8] }}</td>
+            <td>{{ student[9] }}</td>
+            <td>{{ student[10] }}</td>
+            <td>{{ student[11] }}</td>
+            <td>{{ student[12] }}</td>
+            <td>{{ student[13] }}</td>
+            <td>{{ student[14] }}</td>
+            <td>{{ student[15] }}</td>
+            <td>{{ student[16] }}</td>
+            <td>{{ student[17] }}</td>
+            <td>{{ student[18] }}</td>
+            <td>{{ student[19] }}</td>
+            <td>{{ student[20] }}</td>
+        </tr>
+        {% endfor %}
+        <div class="textinscription" id="moreText" style="display: none;">
+            <p>
+                Bienvenue sur la page des notes, dédiée aux responsables pédagogiques. Cette fonctionnalité vous permet de suivre de près les performances académiques des étudiants. Consultez et analysez les résultats de leurs évaluations pour mieux comprendre leur progression. Si vous êtes un responsable pédagogique, connectez-vous pour accéder aux informations détaillées concernant les notes des étudiants et pour prendre des décisions éclairées quant à leur réussite éducative.
+            </p>
+            <p>
+                Assurez-vous d'examiner attentivement les évaluations, car elles sont un outil essentiel pour évaluer les forces et les domaines à améliorer de chaque étudiant. Ces informations vous permettront de fournir un soutien personnalisé et d'encourager leur réussite académique.
+            </p>
+            <p>
+                Si vous avez des questions ou besoin d'aide, n'hésitez pas à contacter notre équipe d'assistance dédiée. Nous sommes là pour vous aider à optimiser l'utilisation de cette plateforme et à maximiser l'impact de votre suivi pédagogique.
+            </p>
+            
+        </div>
+    </table>
+
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</body>
+</html>

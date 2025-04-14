@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='inscription.css') }}">
+    <title>Page d'inscription</title>
+</head>
+
+<body>
+
+    <div class="partie-text">
+        <div class="nav">
+            <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer">
+                <img class="logo" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+            </a>        <a href="http://127.0.0.1:5000/acceuil" class="acceuil">Accueil</a>
+        <a href="http://127.0.0.1:5000/inscription" class="user">New User</a>
+        <a href="#" class="deconnexion" onclick="confirmLogout()">Déconnexion</a>
+    </div>
+
+
+
+        <div class="formulaire">
+            <h2 class="inscriptiontitle">Inscription des nouveaux utilisateurs</h2>
+
+            <button id="showMoreButton" onclick="toggleMoreText()">A propos</button>
+
+            <form id="inscriptionForm" method="post" action="http://127.0.0.1:5000/inscription">
+                <p>
+                    <label for="email">E-mail</label> <br>
+                    <input type="email" id="email" name="email" placeholder="dit.sn@gmail.com" required>
+                </p>
+                <p>
+                    <label for="password">Mot de passe </label> <br>
+                    <input type="password" id="password" name="password" placeholder="xxxxxxxxxxxxxxxxxxx" required>
+                </p>
+                <p>
+                    <label for="confirm_password">Confirmer le mot de passe </label> <br>
+                    <input type="password" id="confirm_password" name="confirm_password" placeholder="xxxxxxxxxxxxxxxxxxx" required>
+                </p>
+                <p>
+                    {% if error_message %}
+                    <span class="message-erreur {% if error_message == "L'inscription de cet utilisateur c'est bien passée" %}succes{% endif %}">
+                        {{ error_message }}
+                    </span>
+                    {% endif %}
+                </p>
+                <p>
+                    <button type="submit">S'inscrire</button>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <div class="textinscription" id="moreText" style="display: none;">
+        <p>
+            Bienvenue sur la page d'inscription des nouveaux utilisateurs. Cette fonctionnalité est destinée aux
+            responsables pédagogiques pour enregistrer les coordonnées (adresse e-mail, mot de passe) d'un nouvel
+            utilisateur autorisé à accéder à la plateforme avec ses propres identifiants. Si vous êtes un nouveau
+            responsable pédagogique ou un membre de l'administration, veuillez remplir le formulaire ci-dessus pour
+            créer un compte et obtenir l'accès à la plateforme.
+        </p>
+        <p>
+            Assurez-vous de fournir une adresse e-mail valide, car vous utiliserez cette adresse pour vous connecter
+            ultérieurement. Choisissez également un mot de passe sécurisé et n'oubliez pas de le confirmer en le
+            saisissant à nouveau dans le champ prévu à cet effet.
+        </p>
+        <p >
+            Si vous avez déjà un compte, veuillez vous rendre sur la page de connexion pour accéder à la plateforme.
+        </p>
+    </div>
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</body>
+
+</html>

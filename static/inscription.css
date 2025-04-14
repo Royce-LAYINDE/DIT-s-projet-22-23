@@ -1,0 +1,179 @@
+body {
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* background: #FFFFFF; */
+    background-color: #f2f2f2;
+}
+
+.ellipse1{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 35px;
+    top: 18px;
+    background: #865546;
+    border-radius: 50%;
+}
+.ellipse2{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 35px;
+    top: 30px;
+    background: #2A5852;
+    border-radius: 50%;
+}
+.ellipse3{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 50px;
+    top: 18px;
+    background: #2A5852;
+    border-radius: 50%;
+}
+.ellipse4{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 50px;
+    top: 30px;
+    background: #865546;
+    border-radius: 50%;  
+}
+
+.logo{
+    position: absolute;
+    width: 133px;
+    height: 40px;
+    left: 49px;
+    top: 15px;
+}
+.acceuil{
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    text-decoration: none;
+}
+.user{
+    position: absolute;
+    top: 20px;
+    left: 30%;
+    text-decoration: none;
+}
+.deconnexion{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    text-decoration: none;
+}
+
+.nav{
+ 
+    position: absolute;
+    width: 1200px;
+    height: 69px;
+    margin-left: 2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.14);
+    border-radius: 8px;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown {
+    position: relative; /* Ajoutez cette ligne */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 37px; 
+    left: 40%; 
+}
+
+/* Styles pour les éléments de la liste du menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Changement de style lorsque la souris survole un élément du menu */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affichage du menu déroulant lors du survol du lien "Présences" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#showMoreButton{
+    width: 180px;
+    height: 35px;
+    background: rgba(138, 171, 167, 0.97);
+    border-radius: 10px;
+    margin-left:35.5%; 
+    /* margin-top: 10%; */
+}
+.textinscription{
+    position: absolute;
+    margin-top: 70%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: italic;
+    padding: 10px;
+    border: 1.65px solid black;
+    border-radius: 10px;
+    text-align: justify;
+
+
+}
+.inscriptiontitle{
+    margin-left:52px ;
+}
+.formulaire{
+    position: absolute;   
+    height: 40%;
+    margin-left: 30% ;
+    margin-top: 8%;
+}
+
+label{
+    
+    font-family: 'Now';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+}
+input{
+    width: 487px;
+    height: 79px;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 9px;
+}
+button{
+    width: 213px;
+    height: 65px;
+    background: rgba(42, 88, 82, 0.97);
+    border-radius: 10px;
+    margin-left: 150px; 
+}
+button:hover{
+    cursor: grab;
+}
+.message-erreur {
+    color: red;
+}
+
+.succes {
+    color: green;
+}
+

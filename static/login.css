@@ -1,0 +1,138 @@
+body{
+    position: relative;
+    width: 1000px;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #f2f2f2;
+    /* background: #FFFFFF; */
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+.partie-text{
+    position: absolute;
+    width: 290px; 
+    
+
+}
+.partie-image{
+    position: absolute;
+    display: flex;
+    width: 721px;
+    height: 93vh;
+    top: 2.5%;
+    left: 58%;
+    background: #91B0C2!important;
+    border-radius: 25px 0px 0px 25px;
+    
+}
+
+.ellipse1{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 35px;
+    top: 18px;
+    background: #865546;
+    border-radius: 50%;
+}
+.ellipse2{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 35px;
+    top: 30px;
+    background: #2A5852;
+    border-radius: 50%;
+}
+.ellipse3{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 50px;
+    top: 18px;
+    background: #2A5852;
+    border-radius: 50%;
+}
+.ellipse4{
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    left: 50px;
+    top: 30px;
+    background: #865546;
+    border-radius: 50%;  
+}
+.DIT{
+    position: absolute;
+    width: 133px;
+    text-decoration: none;
+    left: 71px;
+    top: 20px;
+    font-family: 'Now';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    
+}
+.Welcome-Back{
+    position: absolute;
+    width: 257px;
+    left: 196px;
+    top: 121px;
+    font-family: 'Now';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 40px;
+    color: rgba(0, 0, 0, 0.8);
+}
+.formulaire{
+    position: absolute;
+    width: 400px;
+    left: 50px;
+    top: 220px;
+}
+
+label{
+    
+    font-family: 'Now';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+}
+input{
+    width: 487px;
+    height: 79px;
+    background: rgba(255, 255, 255, 0.33);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.17);
+    border-radius: 9px;
+}
+button{
+    width: 213px;
+    height: 65px;
+    background: rgba(42, 88, 82, 0.97);
+    border-radius: 10px;
+    margin-left: 170px; 
+}
+button:hover{
+    cursor: grab;
+}
+.image1{
+    position: absolute;
+    width: 100%;
+    height: 80%; 
+    top: 20%;
+    background: #91B0C2!important;
+
+}
+.image2{
+    position: absolute;
+    width: 300px;
+    height: 89px;
+    left: 30px;
+    top: 13px;
+}
+

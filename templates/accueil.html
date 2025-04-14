@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Admin\Documents\Documents\DIT-s-projet-22-23\Projet\static\acceuil.css">
+    <title>Acceuil</title>
+</head>
+<body>
+    <div class="nav">
+
+        <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer">
+            <img class="logo" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+        </a>        <a href="http://127.0.0.1:5000/acceuil" class="acceuil">Accueil</a>
+        <a href="http://127.0.0.1:5000/inscription" class="user">New User</a>
+        <a href="#" class="deconnexion" onclick="confirmLogout()">Déconnexion</a>
+    </div>
+<div>
+    <h1>Bienvenue sur DIT-Eduplaner !</h1>
+    <p class="soustitre">La plateforme de suivi académique, conçue pour fournir aux responsables pédagogiques du DIT un outil efficace pour suivre et analyser les performances et le comportement des étudiants à chaque étape de leur parcours académique.</p>
+</div>
+<hr class="separator">
+    <div class="licence-container">
+        <div class="box">
+            <a href="http://127.0.0.1:5000/notes">
+                <img class="box-image" src="{{ url_for('static', filename='images/image4.jpg') }}" alt="Licence 1">
+            </a>
+            <div class="box-content">
+                <h2>Licence 1</h2>
+                <p>La Licence 1 est la première étape du parcours académique de nos étudiants. Cliquer ici pour suivre de près les performances et le comportement des étudiants dans cette formation fondamentale.</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img class="box-image" src="{{ url_for('static', filename='images/image9.jpg') }}" alt="Licence 2">
+            <div class="box-content">
+                <h2>Licence 2</h2>
+                <p>La Licence 2 est une phase cruciale dans le parcours académique de nos étudiants. Cliquer ici pour avoir à votre disposition un outil efficace d'analyse des performances académiques et de comportement des étudiants dans cette étape intermédiaire.</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img class="box-image" src="{{ url_for('static', filename='images/image5.jpg') }}" alt="Licence 3">
+            <div class="box-content">
+                <h2>Licence 3</h2>
+                <p>La Licence 3 est la dernière étape du parcours de nos étudiants avant de passer au niveau de Master. Cliquer ici pour avoir à votre disposition un outil avancé pour surveiller de près les performances et le comportement des étudiants à ce stade critique de leur formation.</p>
+            </div>
+        </div>
+    
+
+    </div>
+    <div class="other-container">
+        <div class="box">
+            <img class="box-image" src="{{ url_for('static', filename='images/image7.jpg') }}"alt="Master 1">
+            <div class="box-content">
+                <h2>Master 1</h2>
+                <p>Le Master 1 représente une étape déterminante dans le parcours académique de nos étudiants. Cliquer ici pour analyser en détail les performances et le comportement des étudiants à ce niveau avancé.</p>
+            </div>
+        </div>
+    
+        <div class="box">
+            <img class="box-image" src="{{ url_for('static', filename='images/image10.jpg') }}" alt="Master 2">
+            <div class="box-content">
+                <h2>Master 2</h2>
+                <p>Le Master 2 marque la fin de la formation académique de nos étudiants. Cliquer ici pour suivre de près les performances et le comportement des étudiants à ce stade crucial de leur parcours.</p>
+            </div>
+
+    </div>
+    <hr class="separator1">
+    
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+body {
+    position: relative;
+    width: 1000px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: auto; 
+    /* background: #FFFFFF; */
+    background-color: #f2f2f2;
+}
+.logo{
+    position: absolute;
+    width: 133px;
+    height: 40px;
+    left: 49px;
+    top: 15px;
+}
+
+.acceuil{
+    position: absolute;
+    top: 20px;
+    left: 20%;
+    text-decoration: none;
+}
+.notes{
+    position: absolute;
+    top: 20px;
+    left: 30%;
+    text-decoration: none;
+}
+.presences{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    text-decoration: none;
+}
+.deconnexion{
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    text-decoration: none;
+}
+.deconnexion1{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    text-decoration: none;
+}
+.user{
+    position: absolute;
+    top: 20px;
+    left: 30%;
+    text-decoration: none;
+}
+
+.nav{
+ 
+    position: absolute;
+    width: 1200px;
+    height: 69px;
+    margin-left: 2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.14);
+    border-radius: 8px;
+}
+button{
+    width: 213px;
+    height: 65px;
+    background: rgba(42, 88, 82, 0.97);
+    border-radius: 10px;
+    margin-top: 19%;
+    margin-left: 100%; 
+}
+button:hover{
+    cursor: grab;
+}
+/* barre de recherche */
+#search{
+    margin-top: 12px;
+    margin-left: 65%;
+    padding:15px;
+    border-radius: 10px;
+  }
+
+  input[type=text] {
+     width: 300px;
+     -webkit-transition: width 0.15s ease-in-out;
+     transition: width 0.15s ease-in-out;
+  }/* Styles pour le menu déroulant */
+.dropdown {
+    position: relative; /* Ajoutez cette ligne */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 37px; 
+    left: 40%; 
+}
+
+/* Styles pour les éléments de la liste du menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Changement de style lorsque la souris survole un élément du menu */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affichage du menu déroulant lors du survol du lien "Présences" */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+  input[type=text]:focus {
+    width: 360px;
+  }
+ /* tableau */
+ table{
+    position: absolute;
+    border-collapse: collapse;
+    width: 900px;
+    text-align: center;
+    margin-top: 25%;
+    margin-left: 2.5rem;
+    margin-top: 5%;
+}
+.recap-table{
+    
+    position: absolute;
+    border-collapse: collapse;
+    width: 900px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 9.5rem;
+    
+    
+}
+
+.histtable{
+    position: absolute;
+    border-collapse: collapse;
+    width: 900px;
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 9.5rem;
+}
+
+tr:nth-child(even){
+    background-color: rgb(220, 233, 233);
+}
+td,th{
+    height: 2rem;  
+}
+th{
+    background-color: cornflowerblue;  
+}
+
+#showMoreButton{
+    width: 180px;
+    height: 35px;
+    background: rgba(138, 171, 167, 0.97);
+    border-radius: 10px;
+    margin-left:95.5%; 
+    margin-top: 10%;
+}
+.textinscription{
+    position: absolute;
+    margin-top: 55rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: italic;
+    padding: 10px;
+    border: 1.65px solid black;
+    border-radius: 10px;
+    text-align: justify;
+}
+.textinscription1{
+    position: absolute;
+    margin-top: 150%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: italic;
+    padding: 10px;
+    border: 1.65px solid black;
+    border-radius: 10px;
+    text-align: justify;
+
+}
+.textinscription2{
+    position: absolute;
+    margin-top:198rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: medium;
+    font-style: italic;
+    padding: 10px;
+    border: 1.65px solid black;
+    border-radius: 10px;
+    text-align: justify;
+}
+.box {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    margin-right: 35px;
+}
+
+.box-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.box-content {
+    padding: 10px;
+}
+
+.box h2 {
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 15px;
+    color: #413f3f;
+}
+.licence-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40%;
+    margin-left: 8%;
+}
+.other-container {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 98%;
+    margin-left: 28%;
+}
+h1 {
+    font-size: 36px;
+    position: absolute;
+    color: #333333;
+    text-align: center;
+    margin-top: 16%;
+    margin-left: 30%;    
+}
+.soustitre {
+    font-size: 18px;
+    position: absolute;
+    color: #666666;
+    max-width: 800px;
+    margin-top: 21%;
+    margin-left: 30%;    
+}
+.separator {
+    border: none;
+    position: absolute;
+    border-top: 6px solid rgba(42, 88, 82, 0.97); 
+    width: 70%; 
+    margin-top: 38%; 
+}
+.separator1 {
+    border: none;
+    position: absolute;
+    border-top: 6px solid rgba(42, 88, 82, 0.97); 
+    width: 130%; 
+    margin-top: 75%; 
+}

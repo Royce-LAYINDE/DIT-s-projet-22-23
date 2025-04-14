@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='acceuil.css') }}">
+    <title>Recapitulatif des Absences</title>
+</head>
+<body>
+    <div class="nav">
+        <a href="https://dit.sn/" target="_blank" rel="noopener noreferrer">
+            <img class="logo" src="{{ url_for('static', filename='images/logodit.png') }}" alt="logo of DIT">
+        </a>        <a href="http://127.0.0.1:5000/acceuil" class="acceuil">Accueil</a>
+        <a href="http://127.0.0.1:5000/notes" class="notes">Notes</a>
+        <div class="dropdown">
+            <button class="dropbtn">Presences</button>
+            <div class="dropdown-content">
+                <a href="lien_vers_page_recap_absences.html">Récapitulatif des absences</a>
+                <a href="lien_vers_page_historique_presences.html">Historique des présences</a>
+            </div>
+        </div>
+        <a href="http://127.0.0.1:5000/presences" class="presences">Présences</a>
+        <a href="#" class="deconnexion1" onclick="confirmLogout()">Déconnexion</a>
+        <input id="search" type="text" name="search" placeholder="Rechercher un étudiant..">
+    </div>
+    <div>
+        <!-- Tableau récapitulatif des absences par matières et par étudiant -->
+        <table id="recap-table">
+            <caption>Récapitulatif des absences par matière et par étudiant</caption>
+            <tr>
+                <th>Nom de l'étudiant</th>
+                <th>Matière</th>
+                <th>Nombre d'absences</th>
+            </tr>
+            {% for data in absences_recap_data %}
+            <tr>
+                <td>{{ data[0] }}</td>
+                <td>{{ data[1] }}</td>
+                <td>{{ data[2] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div>
+        <!-- Historiques des absences par matières et par étudiant -->
+        <table border="1" id="histtable">
+            <tr>
+                <th>Nom de l’étudiant</th>
+                <th>Matière</th>
+                <th>Date d’absence</th>
+                <th>Statut d’absence</th>
+            </tr>
+            {% for presence in presences_data %}
+            <tr>
+                <td>{{ presence[0] }}</td>
+                <td>{{ presence[1] }}</td>
+                <td>{{ presence[2] }}</td>
+                <td>{{ presence[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='filter.js') }}"></script>
+</body>
+</html>
